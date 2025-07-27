@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="grid-container">
+    <div class="item">4</div>
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+</div>
+</body>
+<style>
+  .grid-container {
+  display: flex;   /*left to right span  by default */
+  flex-wrap: wrap-reverse;  /* reverse the order of row settled according to width if given */
+  /* flex-wrap : wrap ;  settles content according to width */
+  /* grid-template-columns: 1fr 1fr; 
+  grid-template-rows: 100px 100px;
+  gap: 10px;
+  width: 220px; */
+}
+
+.item {
+  background-color: lightblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  width : 25%
+
+}
+
+/* .grid-container .item:last-child {
+    order: -1;
+} */
+
+</style>
+</html>

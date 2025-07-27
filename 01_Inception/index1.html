@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script>                                                      //works fine - need eventlistener because of the timing of script execution and dom render.
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('root').innerHTML = 'Hello World';
+        });
+    </script> -->
+    
+</head>
+<body>
+    <div id="root"></div>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script>                                                    
+        document.getElementById('root').innerHTML = 'Hello World';                          //works fine
+        document.getElementById('root').innerHTML = 'Hello World2'; 
+        const heading1 = React.createElement('h1', {}, 'Hello React123')                        //creating element is a part of core react
+        const root1 = ReactDOM.createRoot(document.getElementById('root'))                   //actual DOM manipulation
+        root1.render(heading1)
+        document.getElementById('root').innerHTML = 'Hello World3'; 
+    </script> 
+</body>
+</html>
+<script>
+    // document.getElementById('root').innerHTML = '<h1>Hello World</h1>';  //works fine
+    const root = document.getElementById('root')
+    const heading2 = document.createElement('h1')     
+    heading2.innerHTML = 'Hello JAVAsCRIPT'          //Adding value
+    root.appendChild(heading)                        //MANIPULATING Dom
+</script>
