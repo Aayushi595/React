@@ -1,14 +1,17 @@
-const heading = React.createElement('div', {id : 'head', xyz : 'abc'}, React.createElement('div', {id : 'parent', xyz : 'abc'}, [React.createElement('div', {id : 'child', xyz : 'abc'}, 'Hello React1'), React.createElement('div', {id : 'child', xyz : 'abc'}, 'Hello React2')]))   
+import React from "react"
+import { createRoot } from 'react-dom/client';
+
+const heading = React.createElement('div', {id : 'head', xyz : 'abc'}, React.createElement('div', {id : 'parent', xyz : 'abc'}, [React.createElement('div', {id : 'child1', xyz : 'abc', key : 'child1'}, 'Hello React111'), React.createElement('div', {id : 'child', xyz : 'abc', key : 'child2'}, 'Hello React222')]))   
 console.log(heading)
-const root = ReactDOM.createRoot(document.getElementById('root'))
+const root = createRoot(document.getElementById('root'))
 root.render(heading)
 
 
 
 //two childs of head 
 
-const heading2 = React.createElement('div', {id:'head'},  [React.createElement('div', {class : 'parent', xyz : 'abc'}, [React.createElement('h1', {class : 'child', xyz : 'abc'}, 'child1'), React.createElement('h1', {class : 'child', xyz : 'abc'}, 'child2')]), React.createElement('div', {class : 'parent', xyz : 'abc'}, [React.createElement('h1', {class : 'child', xyz : 'abc'}, 'child1'), React.createElement('h1', {class : 'child', xyz : 'abc'}, 'child2')])])
-const root2 = ReactDOM.createRoot(document.getElementById('root2'))
+const heading2 = React.createElement('div', {id:'head'},  [React.createElement('div', {className : 'parent', xyz : 'abc', key : 'p1'}, [React.createElement('h1', {className : 'child', xyz : 'abc', key : 'pc1'}, 'child1'), React.createElement('h1', {className : 'child', xyz : 'abc', key : 'pc2'}, 'child2')]), React.createElement('div', {className : 'parent', xyz : 'abc', key : 'p2'}, [React.createElement('h1', {className : 'child', xyz : 'abc', key : 'ch1'}, 'child1'), React.createElement('h1', {className : 'child', xyz : 'abc', key : 'ch2'}, 'child2')])])
+const root2 = createRoot(document.getElementById('root2'))
 root2.render(heading2)
 
 
